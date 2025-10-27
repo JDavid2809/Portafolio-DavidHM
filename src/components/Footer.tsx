@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Github, Linkedin, Mail, ArrowUp } from "lucide-react"
 
 export function Footer() {
+    const BASE_URL = "/Portafolio-DavidHM/"
+    
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
@@ -21,8 +23,9 @@ export function Footer() {
     ]
 
     return (
-        <footer className="relative bg-gradient-to-br from-[#0096C7] via-[#0077B6] to-[#023E8A] text-white overflow-hidden">
-            <img src="/ShapeDivider.svg" alt="Shape divider" className="w-full block -mt-1" />
+        <footer className="relative bg-linear-to-br from-[#0096C7] via-[#0077B6] to-[#023E8A] text-white overflow-hidden">
+            <img src={`${BASE_URL}ShapeDivider.svg`} alt="Shape divider" className="w-full block -mt-1" />
+
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
                     className="absolute -top-1/2 -left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"
@@ -58,7 +61,7 @@ export function Footer() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                        <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-white to-white/80 bg-clip-text text-transparent">
                             Juan David Hernández Mendoza 
                         </h3>
                         <p className="text-white/80 leading-relaxed mb-6">
@@ -122,7 +125,7 @@ export function Footer() {
                         <h4 className="text-lg font-semibold mb-4">Contacto</h4>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
-                                <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
+                                <Mail className="w-5 h-5 mt-1 shrink-0" />
                                 <div>
                                     <p className="text-white/80">Email</p>
                                     <a href="mailto:davidhrnndzmndz@gmail.com" className="text-white hover:underline">
@@ -131,7 +134,7 @@ export function Footer() {
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <svg className="w-5 h-5 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-5 h-5 mt-1 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>
                                 <div>
@@ -145,7 +148,7 @@ export function Footer() {
 
                 {/* Divider */}
                 <motion.div
-                    className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"
+                    className="h-px bg-linear-to-r from-transparent via-white/20 to-transparent mb-8"
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}

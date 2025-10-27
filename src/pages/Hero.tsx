@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
+    const BASE_URL = "/Portafolio-DavidHM/"
     return (
         <>
         <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0096C7]">
@@ -251,7 +252,7 @@ export function Hero() {
                 </div>
             </div>
         </section>
-        <img src="/ShapeDivider.svg" alt="Shape divider" className="w-full block -mt-1" />
+        <img src={`${BASE_URL}ShapeDivider.svg`} alt="Shape divider" className="w-full block -mt-1" />
         </>
 
     )
